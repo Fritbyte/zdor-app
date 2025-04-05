@@ -49,4 +49,14 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.compose)
+
+    implementation(libs.retrofit)
+    implementation(libs.okhttp)
+    implementation(libs.converter.gson)
+    implementation(libs.gson)
+    implementation(libs.koin.android)
+    implementation(libs.koin.android.compat)
+
+    implementation(libs.androidx.datastore.preferences)
 }
