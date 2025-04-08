@@ -59,4 +59,5 @@ dependencies {
     implementation(libs.koin.android.compat)
 
     implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.material.icons.extended)
 }

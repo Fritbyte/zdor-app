@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ZdorApplication</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Вход</string>
+    <string name="username_label">Имя пользователя</string>
+    <string name="password_label">Пароль пользователя</string>
+    <string name="login_button">Войти</string>
+    <string name="no_account_register">Нет аккаунта? Зарегистрируйтесь</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Регистрация</string>
+    <string name="confirm_password_label">Повторный пароль</string>
+    <string name="register_button">Зарегистрироваться</string>
+    <string name="have_account_login">Уже есть аккаунт? Войти</string>
+
+    <!-- Connectivity Screen -->
+    <string name="connecting">Подключение к серверу ...</string>
+    <string name="no_connection">Нет соединения с сервером</string>
+
+    <!-- Home Screen -->
+    <string name="welcome">Добро пожаловать!\nToken: %1$s</string>
+    <string name="no_token">Нет токена</string>
+    <string name="logout_button">Выйти</string>
+</resources>

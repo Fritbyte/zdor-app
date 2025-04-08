@@ -28,6 +28,15 @@ class AuthViewModel(
     private val _loginState = MutableStateFlow(LoginState())
     val loginState: StateFlow<LoginState> = _loginState
 
+    init {
+        viewModelScope.launch {
+            val token = tokenManager.getToken()
+            if (token != null) {
+                _loginState.value = LoginState(token = token)
+            }
+        }
+    }
+
     fun login(username: String, password: String) {
         _loginState.value = LoginState(isLoading = true)
         val request = LoginRequest(username, password)
@@ -51,6 +60,7 @@ class AuthViewModel(
     }
 
     fun register(username: String, password: String, confirmPassword: String) {
+        _loginState.value = LoginState(isLoading = true)
         val request = RegisterRequest(username, password, confirmPassword)
         registerUseCase(request).enqueue(object : Callback<AuthResponse> {
             override fun onResponse(call: Call<AuthResponse>, response: Response<AuthResponse>) {
@@ -79,6 +89,12 @@ class AuthViewModel(
     }
 
     suspend fun checkAuth(): Boolean {
-        return tokenManager.getToken() != null
+        return tokenManager.hasValidToken()
+    }
+
+    fun refreshToken() {
+        viewModelScope.launch {
+            tokenManager.refreshTokenExpiry()
+        }
     }
 }

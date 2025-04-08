@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">ZdorApplication</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Login</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="login_button">Login</string>
+    <string name="no_account_register">Don\'t have an account? Register</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Register</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="register_button">Register</string>
+    <string name="have_account_login">Already have an account? Login</string>
+
+    <!-- Connectivity Screen -->
+    <string name="connecting">Connecting to server ...</string>
+    <string name="no_connection">No connection to server</string>
+
+    <!-- Home Screen -->
+    <string name="welcome">Welcome!\nToken: %1$s</string>
+    <string name="no_token">No token</string>
+    <string name="logout_button">Logout</string>
 </resources>
