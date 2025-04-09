@@ -28,4 +28,22 @@ object ColorResources {
 
     @Composable
     fun gray() = colorResource(id = R.color.gray)
+
+    @Composable
+    fun homeBackground() = colorResource(id = R.color.home_background)
+
+    @Composable
+    fun homeCircleBackground() = colorResource(id = R.color.home_circle_background)
+
+    @Composable
+    fun homeCardIconBackground() = colorResource(id = R.color.home_card_icon_background)
+
+    @Composable
+    fun homeCardIconTint() = colorResource(id = R.color.home_card_icon_tint)
+
+    @Composable
+    fun homeCardTitle() = colorResource(id = R.color.home_card_title)
+
+    @Composable
+    fun homeCardDescription() = colorResource(id = R.color.home_card_description)
 }

@@ -19,7 +19,29 @@
     <string name="no_connection">No connection to server</string>
 
     <!-- Home Screen -->
-    <string name="welcome">Welcome!\nToken: %1$s</string>
-    <string name="no_token">No token</string>
+    <string name="welcome">Welcome, %1$s!</string>
+    <string name="no_token">Guest</string>
     <string name="logout_button">Logout</string>
+    <string name="home_health_survey_title">Health Survey</string>
+    <string name="home_health_survey_description">Answer questions to learn about your health status</string>
+    
+    <string name="home_recommendations_title">Health Recommendations</string>
+    <string name="home_recommendations_description">Health improvement recommendations based on survey results</string>
+    
+    <string name="home_education_title">Educational Materials</string>
+    <string name="home_education_description">Prevention and treatment methods for various diseases</string>
+
+    <!-- Navigation Bar -->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_username">Username: %1$s</string>
+    <string name="profile_created">Created:</string>
+    <string name="profile_updated">Updated:</string>
+    <string name="profile_error">Failed to load profile</string>
+
+    <string name="retry_button">Try Again</string>
 </resources>

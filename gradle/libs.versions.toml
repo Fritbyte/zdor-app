@@ -3,6 +3,8 @@ agp = "8.9.1"
 converterGson = "2.9.0"
 datastorePreferences = "1.1.4"
 gson = "2.10.1"
+hiltAndroid = "2.48"
+hiltNavigationCompose = "1.2.0"
 koinAndroid = "3.5.0"
 koinAndroidCompat = "3.1.2"
 kotlin = "2.0.21"
@@ -21,14 +23,19 @@ navigationCompose = "2.8.9"
 okhttp = "4.12.0"
 retrofit = "2.9.0"
 animationCoreLint = "1.8.0-rc02"
+runtimeLivedata = "1.5.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-material-icons-extended-v154 = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtendedVersion" }
+androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "runtimeLivedata" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

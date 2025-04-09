@@ -1,15 +1,16 @@
 package com.zdor.application.data.repository
 
-import com.zdor.application.data.api.ApiConfig
 import com.zdor.application.data.api.AuthApi
 import com.zdor.application.data.model.input.LoginRequest
 import com.zdor.application.data.model.input.RegisterRequest
 import com.zdor.application.data.model.output.AuthResponse
 import com.zdor.application.domain.repository.AuthRepository
 import retrofit2.Call
+import javax.inject.Inject
 
-class AuthRepositoryImpl : AuthRepository {
-    private val authApi: AuthApi = ApiConfig.retrofit.create(AuthApi::class.java)
+class AuthRepositoryImpl @Inject constructor(
+    private val authApi: AuthApi
+) : AuthRepository {
 
     override fun login(request: LoginRequest): Call<AuthResponse> {
         return authApi.login(request)

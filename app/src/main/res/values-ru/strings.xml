@@ -19,7 +19,29 @@
     <string name="no_connection">Нет соединения с сервером</string>
 
     <!-- Home Screen -->
-    <string name="welcome">Добро пожаловать!\nToken: %1$s</string>
-    <string name="no_token">Нет токена</string>
+    <string name="welcome">Привет, %1$s!</string>
+    <string name="no_token">Гость</string>
     <string name="logout_button">Выйти</string>
+    <string name="home_health_survey_title">ОПРОСНИК ЗДОРОВЬЯ</string>
+    <string name="home_health_survey_description">Ответьте на вопросы, чтобы узнать о состоянии своего здоровья</string>
+    
+    <string name="home_recommendations_title">РЕКОМЕНДАЦИИ ПО УЛУЧШЕНИЮ ЗДОРОВЬЯ</string>
+    <string name="home_recommendations_description">Рекомендации по улучшению здоровья на основе результатов опросника</string>
+    
+    <string name="home_education_title">ОБРАЗОВАТЕЛЬНЫЕ МАТЕРИАЛЫ</string>
+    <string name="home_education_description">Профилактика, методы лечения некоторых болезней</string>
+
+    <!-- Navigation Bar -->
+    <string name="nav_home">Главная</string>
+    <string name="nav_profile">Профиль</string>
+    <string name="nav_settings">Настройки</string>
+
+    <!-- Profile Screen -->
+    <string name="profile_title">Профиль</string>
+    <string name="profile_username">Имя пользователя: %1$s</string>
+    <string name="profile_created">Создан:</string>
+    <string name="profile_updated">Обновлен:</string>
+    <string name="profile_error">Ошибка загрузки профиля</string>
+
+    <string name="retry_button">Повторить попытку</string>
 </resources>

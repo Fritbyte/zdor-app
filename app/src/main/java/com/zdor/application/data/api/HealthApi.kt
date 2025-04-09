@@ -4,7 +4,7 @@ import com.zdor.application.data.model.output.HealthResponse
 import retrofit2.Call
 import retrofit2.http.GET
 
-interface Connectivity {
+interface HealthApi {
     @GET("/api/health")
-    fun checkHealth() : Call<HealthResponse>
-}
+    fun checkHealth(): Call<HealthResponse>
+} 

@@ -14,4 +14,11 @@
     <color name="transparent">#00000000</color>
     <color name="red">#FFFF0000</color>
     <color name="gray">#FF888888</color>
+
+    <color name="home_background">#FFF3F1F8</color>
+    <color name="home_circle_background">#FFE6E1F4</color>
+    <color name="home_card_icon_background">#FFE6E1F4</color>
+    <color name="home_card_icon_tint">#FF8B7EF8</color>
+    <color name="home_card_title">#FF1D1B20</color>
+    <color name="home_card_description">#FF49454F</color>
 </resources>

@@ -1,45 +1,54 @@
 package com.zdor.application.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.zdor.application.data.api.ApiConfig
-import com.zdor.application.data.api.Connectivity
+import com.zdor.application.data.api.HealthApi
 import com.zdor.application.data.model.output.HealthResponse
+import com.zdor.application.data.network.NetworkStateHolder
 import com.zdor.application.presentation.state.ConnectivityState
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Call
+import javax.inject.Inject
 
-class ConnectivityViewModel : ViewModel() {
-    private val api = ApiConfig.retrofit.create(Connectivity::class.java)
+@HiltViewModel
+class ConnectivityViewModel @Inject constructor(
+    private val api: HealthApi
+) : ViewModel() {
 
     private val _connectivityState = MutableStateFlow(ConnectivityState())
     val connectivityState: StateFlow<ConnectivityState> = _connectivityState
 
+    private var periodicCheckJob: Job? = null
+
     fun checkServerConnectivity() {
         _connectivityState.value = ConnectivityState(isChecking = true)
-
-        api.checkHealth().enqueue(object : Callback<HealthResponse> {
-            override fun onResponse(call: Call<HealthResponse>, response: Response<HealthResponse>) {
-                if (response.isSuccessful && response.body()?.status == "ok") {
-                    _connectivityState.value = ConnectivityState(isConnected = true)
-                } else {
+        api.checkHealth().enqueue(object : retrofit2.Callback<HealthResponse> {
+            override fun onResponse(
+                call: retrofit2.Call<HealthResponse>,
+                response: retrofit2.Response<HealthResponse>
+            ) {
+                val isConnected = response.isSuccessful
+                NetworkStateHolder.updateConnectionState(isConnected)
+                _connectivityState.value = ConnectivityState(isConnected = isConnected)
+                if (!isConnected) {
                     _connectivityState.value = ConnectivityState(
                         isConnected = false,
-                        error = "Сервер недоступен: ${response.code()}"
+                        error = "Сервер недоступен"
                     )
-                    startPeriodicConnectivityCheck()
                 }
+                startPeriodicConnectivityCheck()
             }
 
-            override fun onFailure(call: Call<HealthResponse>, t: Throwable) {
+            override fun onFailure(call: retrofit2.Call<HealthResponse>, t: Throwable) {
+                NetworkStateHolder.updateConnectionState(false)
                 _connectivityState.value = ConnectivityState(
                     isConnected = false,
-                    error = "Ошибка подключения: ${t.message ?: "Неизвестная ошибка"}"
+                    error = t.message ?: "Ошибка подключения"
                 )
                 startPeriodicConnectivityCheck()
             }
@@ -47,9 +56,15 @@ class ConnectivityViewModel : ViewModel() {
     }
 
     private fun startPeriodicConnectivityCheck() {
-        viewModelScope.launch {
-            delay(5000)
+        periodicCheckJob?.cancel()
+        periodicCheckJob = CoroutineScope(Dispatchers.IO).launch {
+            delay(30000)
             checkServerConnectivity()
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        periodicCheckJob?.cancel()
     }
 }
