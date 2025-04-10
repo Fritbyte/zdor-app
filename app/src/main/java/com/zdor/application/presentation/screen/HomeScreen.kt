@@ -32,10 +32,9 @@ import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import com.zdor.application.R
 import com.zdor.application.presentation.components.HomeCard
-import com.zdor.application.presentation.components.NavigationBar
+import com.zdor.application.presentation.components.NetworkMonitor
 import com.zdor.application.presentation.config.ColorResources
 import com.zdor.application.presentation.viewmodel.AuthViewModel
-import com.zdor.application.presentation.components.NetworkMonitor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -97,21 +96,18 @@ fun HomeScreen(
             Scaffold(
                 topBar = {
                     TopAppBar(
-                        title = { 
+                        title = {
                             Text(
                                 text = stringResource(R.string.app_name),
                                 style = MaterialTheme.typography.headlineMedium,
                                 fontWeight = FontWeight.Bold
-                            ) 
+                            )
                         },
                         colors = TopAppBarDefaults.topAppBarColors(
                             containerColor = ColorResources.transparent(),
                             titleContentColor = MaterialTheme.colorScheme.primary
                         )
                     )
-                },
-                bottomBar = {
-                    NavigationBar(navController = navController)
                 },
                 containerColor = Color.Transparent
             ) { paddingValues ->

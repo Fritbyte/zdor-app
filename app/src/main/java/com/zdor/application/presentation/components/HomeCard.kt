@@ -41,17 +41,19 @@ fun HomeCard(
             .clip(RoundedCornerShape(24.dp))
             .clickable(onClick = onClick),
         color = ColorResources.white(),
-        shadowElevation = 0.dp
+        shadowElevation = 4.dp,
+        tonalElevation = 2.dp
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
+                .padding(horizontal = 20.dp, vertical = 16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Box(
                 modifier = Modifier
-                    .size(80.dp)
+                    .size(72.dp)
                     .clip(RoundedCornerShape(20.dp))
                     .background(ColorResources.homeCardIconBackground()),
                 contentAlignment = Alignment.Center
@@ -59,16 +61,15 @@ fun HomeCard(
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    modifier = Modifier.size(40.dp),
+                    modifier = Modifier.size(36.dp),
                     tint = ColorResources.homeCardIconTint()
                 )
             }
 
             Column(
                 modifier = Modifier
-                    .weight(1f)
-                    .padding(horizontal = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                    .weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
                     text = title,
@@ -85,16 +86,16 @@ fun HomeCard(
 
             Box(
                 modifier = Modifier
-                    .size(32.dp)
-                    .clip(RoundedCornerShape(16.dp))
+                    .size(36.dp)
+                    .clip(RoundedCornerShape(18.dp))
                     .background(ColorResources.homeCardIconTint().copy(alpha = 0.1f)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = Icons.Default.ArrowForward,
                     contentDescription = null,
-                    tint = ColorResources.homeCardIconTint(),
-                    modifier = Modifier.size(20.dp)
+                    modifier = Modifier.size(20.dp),
+                    tint = ColorResources.homeCardIconTint()
                 )
             }
         }

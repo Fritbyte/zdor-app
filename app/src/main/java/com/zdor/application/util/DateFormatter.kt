@@ -16,7 +16,12 @@ object DateFormatter {
         return try {
             val instant = Instant.parse(isoDateString)
             val date = instant.atZone(ZoneId.systemDefault())
-            "${date.year}-${String.format("%02d", date.monthValue)}-${String.format("%02d", date.dayOfMonth)}"
+            "${date.year}-${String.format("%02d", date.monthValue)}-${
+                String.format(
+                    "%02d",
+                    date.dayOfMonth
+                )
+            }"
         } catch (e: Exception) {
             isoDateString
         }
@@ -26,7 +31,12 @@ object DateFormatter {
         return try {
             val instant = Instant.parse(isoDateString)
             val date = instant.atZone(ZoneId.systemDefault())
-            "${date.year}-${String.format("%02d", date.monthValue)}-${String.format("%02d", date.dayOfMonth)}"
+            "${date.year}-${String.format("%02d", date.monthValue)}-${
+                String.format(
+                    "%02d",
+                    date.dayOfMonth
+                )
+            }"
         } catch (e: Exception) {
             isoDateString
         }

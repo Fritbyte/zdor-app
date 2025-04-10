@@ -44,7 +44,6 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.zdor.application.R
-import com.zdor.application.presentation.components.NavigationBar
 import com.zdor.application.presentation.components.ProfileInfoItem
 import com.zdor.application.presentation.state.ProfileState
 import com.zdor.application.presentation.viewmodel.AuthViewModel
@@ -83,9 +82,6 @@ fun ProfileScreen(
                         titleContentColor = MaterialTheme.colorScheme.primary
                     )
                 )
-            },
-            bottomBar = {
-                NavigationBar(navController = navController)
             },
             containerColor = Color.Transparent
         ) { padding ->
