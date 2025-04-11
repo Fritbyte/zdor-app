@@ -131,7 +131,7 @@ fun HomeScreen(
                         title = stringResource(R.string.home_recommendations_title),
                         description = stringResource(R.string.home_recommendations_description),
                         icon = Icons.Default.LocalHospital,
-                        onClick = { /* TODO: Навигация на экран рекомендаций */ }
+                        onClick = { navController.navigate(Screen.Recommendations.route) }
                     )
 
                     HomeCard(

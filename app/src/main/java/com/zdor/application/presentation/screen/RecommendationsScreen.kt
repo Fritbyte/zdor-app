@@ -45,7 +45,7 @@ import com.zdor.application.presentation.config.ColorResources
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun EducationScreen(
+fun RecommendationsScreen(
     navController: NavController
 ) {
     val context = LocalContext.current
@@ -62,7 +62,7 @@ fun EducationScreen(
                     TopAppBar(
                         title = {
                             Text(
-                                text = stringResource(R.string.home_education_title),
+                                text = stringResource(R.string.home_recommendations_title),
                                 style = MaterialTheme.typography.headlineMedium,
                                 fontWeight = FontWeight.Bold
                             )
@@ -144,7 +144,7 @@ fun EducationScreen(
                                         cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
                                         setRenderPriority(WebSettings.RenderPriority.HIGH)
                                     }
-                                    loadUrl("file:///android_asset/education.html")
+                                    loadUrl("file:///android_asset/recommendations.html")
                                 }
                             },
                             modifier = Modifier.fillMaxSize()

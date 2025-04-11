@@ -18,18 +18,18 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.8;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: transparent;
     padding-bottom: calc(var(--spacing-unit) * 10);
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: calc(var(--spacing-unit) * 3);
+    padding: 0 calc(var(--spacing-unit) * 3);
 }
 
 h1, h2 {
-    color: var(--primary-color);
+    color: white;
     margin: calc(var(--spacing-unit) * 3) 0;
     line-height: 1.4;
 }
@@ -37,11 +37,14 @@ h1, h2 {
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
+    margin-bottom: calc(var(--spacing-unit) * 6);
 }
 
 h2 {
+    color: var(--primary-color);
     font-size: 2rem;
     font-weight: 600;
+    margin-bottom: calc(var(--spacing-unit) * 4);
 }
 
 .card {
@@ -55,6 +58,11 @@ h2 {
 
 .card:active {
     transform: scale(0.98);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
 }
 
 .tip {
@@ -121,11 +129,20 @@ p {
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
+    padding-top: calc(var(--spacing-unit) * 2);
 }
 
 .section.active {
     display: block;
     opacity: 1;
+}
+
+.section > h1 {
+    padding: 0 calc(var(--spacing-unit) * 3);
+}
+
+.section > .card:first-child {
+    margin-top: calc(var(--spacing-unit) * 5);
 }
 
 .image-container {
@@ -182,7 +199,7 @@ ul ul {
     }
 
     .container {
-        padding: calc(var(--spacing-unit) * 2);
+        padding: 0 calc(var(--spacing-unit) * 2);
     }
 
     .card {

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="lifestyle" class="section active">
+            
+            <div class="card">
+                <h2>Ежедневные привычки</h2>
+                <ul>
+                    <li>Соблюдайте режим сна (7-9 часов в сутки)</li>
+                    <li>Пейте достаточно воды (2-2.5 литра в день)</li>
+                    <li>Делайте регулярные перерывы при работе за компьютером</li>
+                    <li>Практикуйте глубокое дыхание</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Распорядок дня</h2>
+                <ul>
+                    <li>Просыпайтесь и ложитесь в одно и то же время</li>
+                    <li>Планируйте приемы пищи</li>
+                    <li>Выделяйте время на физическую активность</li>
+                    <li>Находите время для отдыха</li>
+                </ul>
+                <div class="tip">
+                    Постарайтесь придерживаться режима даже в выходные дни
+                </div>
+            </div>
+        </div>
+
+        <div id="nutrition" class="section">
+            <div class="card">
+                <h2>Основные принципы</h2>
+                <ul>
+                    <li>Ешьте разнообразную пищу</li>
+                    <li>Контролируйте размер порций</li>
+                    <li>Готовьте дома чаще</li>
+                    <li>Читайте этикетки продуктов</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Правильный рацион</h2>
+                <table>
+                    <tr>
+                        <th>Группа продуктов</th>
+                        <th>Рекомендации</th>
+                    </tr>
+                    <tr>
+                        <td>Овощи и фрукты</td>
+                        <td>5+ порций в день</td>
+                    </tr>
+                    <tr>
+                        <td>Белки</td>
+                        <td>2-3 порции в день</td>
+                    </tr>
+                    <tr>
+                        <td>Цельные злаки</td>
+                        <td>6-8 порций в день</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="activity" class="section">
+            <div class="card">
+                <h2>Виды активности</h2>
+                <ul>
+                    <li>Аэробные упражнения (ходьба, бег, плавание)</li>
+                    <li>Силовые тренировки</li>
+                    <li>Растяжка и йога</li>
+                    <li>Спортивные игры</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>План тренировок</h2>
+                <p>Недельный план активности:</p>
+                <ul>
+                    <li>3-4 дня аэробных упражнений</li>
+                    <li>2-3 дня силовых тренировок</li>
+                    <li>1-2 дня активного отдыха</li>
+                </ul>
+                <div class="warning">
+                    При наличии проблем со здоровьем проконсультируйтесь с врачом
+                </div>
+            </div>
+        </div>
+
+        <div id="mental" class="section">
+            <div class="card">
+                <h2>Ежедневные практики</h2>
+                <ul>
+                    <li>Медитация (10-15 минут в день)</li>
+                    <li>Ведение дневника</li>
+                    <li>Техники релаксации</li>
+                    <li>Позитивные аффирмации</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Управление стрессом</h2>
+                <ul>
+                    <li>Определите источники стресса</li>
+                    <li>Практикуйте техники дыхания</li>
+                    <li>Регулярно занимайтесь спортом</li>
+                    <li>Поддерживайте здоровый сон</li>
+                </ul>
+                <div class="tip">
+                    Помните, что обращение за помощью - это признак силы, а не слабости
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav-menu">
+        <a href="#lifestyle" class="nav-item active" onclick="showSection('lifestyle', this)">Образ жизни</a>
+        <a href="#nutrition" class="nav-item" onclick="showSection('nutrition', this)">Питание</a>
+        <a href="#activity" class="nav-item" onclick="showSection('activity', this)">Активность</a>
+        <a href="#mental" class="nav-item" onclick="showSection('mental', this)">Психология</a>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
