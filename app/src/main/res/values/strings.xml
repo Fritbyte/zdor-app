@@ -44,4 +44,5 @@
     <string name="profile_error">Failed to load profile</string>
 
     <string name="retry_button">Try Again</string>
+    <string name="back_button">Back</string>
 </resources>

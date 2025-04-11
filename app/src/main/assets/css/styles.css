@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #6200ee;
+    --background-color: #f8f9fa;
+    --card-background: white;
+    --text-color: #333;
+    --tip-background: #e3f2fd;
+    --tip-border: #2196f3;
+    --spacing-unit: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-bottom: calc(var(--spacing-unit) * 10);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 3);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin: calc(var(--spacing-unit) * 3) 0;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card {
+    background: var(--card-background);
+    border-radius: calc(var(--spacing-unit) * 2);
+    padding: calc(var(--spacing-unit) * 3);
+    margin: calc(var(--spacing-unit) * 3) 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.tip {
+    background-color: var(--tip-background);
+    border-left: 4px solid var(--tip-border);
+    padding: calc(var(--spacing-unit) * 2);
+    margin: calc(var(--spacing-unit) * 3) 0;
+    border-radius: 0 calc(var(--spacing-unit)) calc(var(--spacing-unit)) 0;
+}
+
+.warning {
+    background-color: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: calc(var(--spacing-unit) * 2);
+    margin: calc(var(--spacing-unit) * 3) 0;
+    border-radius: 0 calc(var(--spacing-unit)) calc(var(--spacing-unit)) 0;
+}
+
+ul {
+    padding-left: calc(var(--spacing-unit) * 3);
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+li {
+    margin: calc(var(--spacing-unit) * 1.5) 0;
+    padding-left: var(--spacing-unit);
+}
+
+p {
+    margin: calc(var(--spacing-unit) * 2) 0;
+    font-size: 1rem;
+}
+
+.nav-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--card-background);
+    padding: calc(var(--spacing-unit) * 2);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-item {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: calc(var(--spacing-unit)) calc(var(--spacing-unit) * 2);
+    border-radius: calc(var(--spacing-unit) * 2.5);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item.active {
+    opacity: 1;
+    background: rgba(98, 0, 238, 0.1);
+}
+
+.section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.section.active {
+    display: block;
+    opacity: 1;
+}
+
+.image-container {
+    width: 100%;
+    margin: 16px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: calc(var(--spacing-unit) * 3) 0;
+    border-radius: calc(var(--spacing-unit));
+    overflow: hidden;
+}
+
+th, td {
+    padding: calc(var(--spacing-unit) * 2);
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    background-color: white;
+}
+
+/* Вложенные списки */
+ul ul {
+    margin: calc(var(--spacing-unit)) 0;
+}
+
+/* Карточки внутри карточек */
+.card .card {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+@media (max-width: 600px) {
+    body {
+        line-height: 1.6;
+    }
+
+    .container {
+        padding: calc(var(--spacing-unit) * 2);
+    }
+
+    .card {
+        padding: calc(var(--spacing-unit) * 2);
+        margin: calc(var(--spacing-unit) * 2) 0;
+    }
+
+    .nav-item {
+        padding: calc(var(--spacing-unit)) calc(var(--spacing-unit) * 1.5);
+        font-size: 0.85rem;
+    }
+} 

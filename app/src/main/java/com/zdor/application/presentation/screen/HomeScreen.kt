@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import com.zdor.application.R
+import com.zdor.application.navigation.Screen
 import com.zdor.application.presentation.components.HomeCard
 import com.zdor.application.presentation.components.NetworkMonitor
 import com.zdor.application.presentation.config.ColorResources
@@ -137,7 +138,7 @@ fun HomeScreen(
                         title = stringResource(R.string.home_education_title),
                         description = stringResource(R.string.home_education_description),
                         icon = Icons.Default.LibraryBooks,
-                        onClick = { /* TODO: Навигация на экран материалов */ }
+                        onClick = { navController.navigate(Screen.Education.route) }
                     )
                 }
             }

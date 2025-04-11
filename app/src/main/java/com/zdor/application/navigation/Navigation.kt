@@ -134,6 +134,16 @@ fun AppNavigation(
                     viewModel = profileViewModel
                 )
             }
+
+            composable(
+                route = Screen.Education.route,
+                enterTransition = { ScreenTransitions.enterTransition(this.targetState) },
+                exitTransition = { ScreenTransitions.exitTransition(this.targetState) },
+                popEnterTransition = { ScreenTransitions.popEnterTransition(this.initialState) },
+                popExitTransition = { ScreenTransitions.popExitTransition(this.initialState) }
+            ) {
+                EducationScreen(navController = navController)
+            }
         }
     }
 }

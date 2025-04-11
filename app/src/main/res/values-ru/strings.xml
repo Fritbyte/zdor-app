@@ -44,4 +44,5 @@
     <string name="profile_error">Ошибка загрузки профиля</string>
 
     <string name="retry_button">Повторить попытку</string>
+    <string name="back_button">Назад</string>
 </resources>

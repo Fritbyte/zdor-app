@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <section id="lifestyle" class="section active">
+            <div class="card">
+                <h2>Здоровый образ жизни</h2>
+                <p>Здоровый образ жизни - это комплексный подход к улучшению качества жизни и укреплению здоровья.</p>
+                <ul>
+                    <li><strong>Физическая активность:</strong> Минимум 30 минут умеренной активности ежедневно</li>
+                    <li><strong>Сбалансированное питание:</strong> Разнообразие продуктов и регулярный режим</li>
+                    <li><strong>Здоровый сон:</strong> 7-9 часов ежедневно</li>
+                    <li><strong>Управление стрессом:</strong> Регулярная релаксация и отдых</li>
+                </ul>
+                <div class="tip">
+                    <strong>Совет:</strong> Начните с малого - замените лифт на лестницу, добавьте в рацион больше овощей.
+                </div>
+            </div>
+        </section>
+
+        <section id="nutrition" class="section">
+            <div class="card">
+                <h2>Правильное питание</h2>
+                <p>Сбалансированное питание - основа здоровья и хорошего самочувствия.</p>
+                <table>
+                    <tr>
+                        <th>Группа продуктов</th>
+                        <th>Рекомендуемая порция</th>
+                    </tr>
+                    <tr>
+                        <td>Овощи и фрукты</td>
+                        <td>5+ порций в день</td>
+                    </tr>
+                    <tr>
+                        <td>Цельные злаки</td>
+                        <td>6-8 порций в день</td>
+                    </tr>
+                    <tr>
+                        <td>Белки</td>
+                        <td>2-3 порции в день</td>
+                    </tr>
+                    <tr>
+                        <td>Молочные продукты</td>
+                        <td>2-3 порции в день</td>
+                    </tr>
+                </table>
+                <div class="warning">
+                    <strong>Внимание:</strong> Ограничьте потребление соли до 5г в день и добавленного сахара до 25г.
+                </div>
+            </div>
+        </section>
+
+        <section id="activity" class="section">
+            <div class="card">
+                <h2>Физическая активность</h2>
+                <p>Регулярная физическая активность необходима для поддержания здоровья и профилактики заболеваний.</p>
+                <div class="card">
+                    <h2>Рекомендуемые виды активности</h2>
+                    <ul>
+                        <li><strong>Аэробные нагрузки:</strong>
+                            <ul>
+                                <li>Ходьба быстрым шагом</li>
+                                <li>Плавание</li>
+                                <li>Велосипед</li>
+                                <li>Бег трусцой</li>
+                            </ul>
+                        </li>
+                        <li><strong>Силовые упражнения:</strong>
+                            <ul>
+                                <li>Отжимания</li>
+                                <li>Приседания</li>
+                                <li>Планка</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tip">
+                    <strong>План на неделю:</strong>
+                    <ul>
+                        <li>150 минут умеренной активности</li>
+                        <li>или 75 минут интенсивной активности</li>
+                        <li>плюс 2-3 силовые тренировки</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="mental" class="section">
+            <div class="card">
+                <h2>Психическое здоровье</h2>
+                <p>Забота о психическом здоровье так же важна, как и о физическом.</p>
+                <div class="card">
+                    <h2>Практики для поддержания психического здоровья</h2>
+                    <ul>
+                        <li><strong>Медитация:</strong> 10-15 минут ежедневно</li>
+                        <li><strong>Дыхательные упражнения:</strong> 
+                            <ul>
+                                <li>4-7-8 техника дыхания</li>
+                                <li>Квадратное дыхание</li>
+                            </ul>
+                        </li>
+                        <li><strong>Социальная активность:</strong>
+                            <ul>
+                                <li>Регулярное общение с близкими</li>
+                                <li>Участие в групповых активностях</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="warning">
+                    <strong>Важно:</strong> При появлении тревожности или депрессии обратитесь к специалисту.
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <nav class="nav-menu">
+        <a href="#lifestyle" class="nav-item active" onclick="showSection('lifestyle', this)">Образ жизни</a>
+        <a href="#nutrition" class="nav-item" onclick="showSection('nutrition', this)">Питание</a>
+        <a href="#activity" class="nav-item" onclick="showSection('activity', this)">Активность</a>
+        <a href="#mental" class="nav-item" onclick="showSection('mental', this)">Психология</a>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
